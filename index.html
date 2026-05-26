@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inactivos Historias Laborales 2025</title>
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --panel: #ffffff;
+      --text: #20252b;
+      --muted: #64748b;
+      --line: #d9dee7;
+      --row: #f1f1f1;
+      --row2: #ffffff;
+      --primary: #0d6efd;
+      --success: #198754;
+      --danger: #dc3545;
+      --warning: #f59e0b;
+      --dark: #212529;
+      --shadow: 0 20px 55px rgba(15, 23, 42, .18);
+      --radius: 12px;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --line: #374151;
+      --row: #172033;
+      --row2: #111827;
+      --primary: #60a5fa;
+      --success: #34d399;
+      --danger: #fb7185;
+      --warning: #fbbf24;
+      --dark: #e5e7eb;
+      --shadow: 0 22px 60px rgba(0, 0, 0, .45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.86), rgba(255,255,255,.86)),
+        repeating-linear-gradient(45deg, transparent 0, transparent 150px, rgba(148,163,184,.18) 151px, rgba(148,163,184,.18) 153px),
+        linear-gradient(140deg, var(--bg) 0%, #ffffff 52%, #ccfbf1 100%);
+      color: var(--text);
+    }
+
+    body.dark {
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,.25), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(20,184,166,.18), transparent 35%),
+        var(--bg);
+    }
+
+    .container {
+      width: min(1760px, calc(100% - 42px));
+      margin: 22px auto 42px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: clamp(30px, 3.3vw, 52px);
+      letter-spacing: 2px;
+      margin: 12px 0 56px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    button, select, input, textarea {
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    .btn {
+      border: 1px solid transparent;
+      border-radius: 7px;
+      padding: 12px 16px;
+      cursor: pointer;
+      color: #fff;
+      background: var(--primary);
+      transition: transform .15s ease, filter .15s ease, background .15s ease;
+      user-select: none;
+    }
+
+    .btn:hover {
+      filter: brightness(.95);
+      transform: translateY(-1px);
+    }
+
+    .btn:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-success { background: var(--success); }
+    .btn-danger { background: var(--danger); }
+    .btn-warning { background: var(--warning); color: #111827; }
+    .btn-secondary { background: #6c757d; }
+    .btn-dark { background: #1f2937; }
+    .btn-light {
+      background: #f8fafc;
+      color: #111827;
+      border-color: #cbd5e1;
+    }
+
+    body.dark .btn-light {
+      background: #111827;
+      color: #e5e7eb;
+      border-color: #374151;
+    }
+
+    .table-controls {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      margin: 18px 0 28px;
+    }
+
+    .length-box,
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .search-box {
+      justify-content: flex-end;
+    }
+
+    .search-box input[type="search"] {
+      width: min(500px, 48vw);
+    }
+
+    .filters-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: -8px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(248, 250, 252, .72);
+    }
+
+    body.dark .filters-row {
+      background: rgba(17, 24, 39, .72);
+    }
+
+    .filter-control {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 220px;
+    }
+
+    .filter-control label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: .35px;
+    }
+
+    .filter-control select {
+      min-width: 220px;
+    }
+
+    .filter-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      min-height: 44px;
+    }
+
+    .filter-summary {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    select,
+    input,
+    textarea {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      min-height: 44px;
+      padding: 10px 14px;
+      outline: none;
+    }
+
+    select:focus,
+    input:focus,
+    textarea:focus {
+      border-color: #93c5fd;
+      box-shadow: 0 0 0 4px rgba(13,110,253,.18);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 88px;
+    }
+
+    .export-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow: auto;
+      border-radius: 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 1120px;
+      border-collapse: collapse;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    thead th {
+      text-align: left;
+      padding: 18px 16px;
+      font-size: 18px;
+      letter-spacing: 1.2px;
+      border-bottom: 1px solid #aeb6c1;
+      color: var(--text);
+      white-space: nowrap;
+      cursor: pointer;
+      position: relative;
+    }
+
+    thead th.no-sort {
+      cursor: default;
+    }
+
+    thead th.sortable::after {
+      content: "↕";
+      color: #c7ccd3;
+      position: absolute;
+      right: 8px;
+      top: 18px;
+      font-size: 20px;
+    }
+
+    tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    tbody tr:nth-child(odd) { background: var(--row); }
+    tbody tr:nth-child(even) { background: var(--row2); }
+
+    .estado-inactivo {
+      color: #ff2f3d;
+      font-weight: 500;
+    }
+
+    .estado-activo {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .icon-btn {
+      border: none;
+      background: transparent;
+      color: #0877ff;
+      cursor: pointer;
+      font-size: 21px;
+      padding: 4px;
+    }
+
+    .icon-btn.delete {
+      color: var(--danger);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      font-size: 17px;
+    }
+
+    .pagination {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .page-btn {
+      min-width: 45px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--primary);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .page-btn.active {
+      background: #0d6efd;
+      color: #fff;
+      border-color: #0d6efd;
+    }
+
+    .page-btn:disabled {
+      color: #6b7280;
+      background: #e5e7eb;
+      cursor: not-allowed;
+    }
+
+    body.dark .page-btn:disabled {
+      background: #1f2937;
+      color: #6b7280;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 38px 20px;
+      background: rgba(0,0,0,.74);
+      z-index: 50;
+      overflow: auto;
+    }
+
+    .overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      width: min(1320px, 100%);
+      background: var(--panel);
+      border-radius: 8px;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: pop .18s ease-out;
+    }
+
+    .modal.small {
+      width: min(560px, 100%);
+    }
+
+    .modal.large {
+      width: min(1480px, 100%);
+    }
+
+    @keyframes pop {
+      from { opacity: .3; transform: translateY(-8px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .modal-header {
+      padding: 22px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .modal-title {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .close {
+      border: none;
+      background: transparent;
+      color: #777;
+      font-size: 42px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    body.dark .close {
+      color: #cbd5e1;
+    }
+
+    .modal-body {
+      padding: 24px 22px 28px;
+    }
+
+    .modal-footer {
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 18px 22px;
+      background: rgba(148,163,184,.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px 30px;
+      align-items: end;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: span 2;
+    }
+
+    label {
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .required::after {
+      content: "*";
+      color: var(--danger);
+      margin-left: 1px;
+    }
+
+    .status {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      max-width: 460px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      color: #fff;
+      display: none;
+      z-index: 80;
+      box-shadow: var(--shadow);
+    }
+
+    .status.ok { background: #198754; }
+    .status.err { background: #dc3545; }
+    .status.info { background: #0d6efd; }
+    .status.open { display: block; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(170px, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(148,163,184,.08), rgba(148,163,184,.03));
+    }
+
+    .card .num {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .card .label {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .chart-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      min-height: 320px;
+      background: rgba(148,163,184,.06);
+    }
+
+    .chart-title {
+      font-size: 20px;
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+
+    canvas {
+      width: 100%;
+      max-width: 100%;
+      height: 260px;
+      display: block;
+    }
+
+    .history-list {
+      max-height: 600px;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .history-item {
+      display: grid;
+      grid-template-columns: 150px 120px 85px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .history-item:last-child {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .4px;
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .badge.add { background: #dcfce7; color: #166534; }
+    .badge.edit { background: #dbeafe; color: #1d4ed8; }
+    .badge.delete { background: #fee2e2; color: #b91c1c; }
+    .badge.restore { background: #fef3c7; color: #92400e; }
+
+    .api-box {
+      border: 1px dashed var(--line);
+      background: rgba(13,110,253,.06);
+      padding: 12px;
+      border-radius: 8px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .table-controls {
+        grid-template-columns: 1fr;
+      }
+
+      .search-box {
+        justify-content: flex-start;
+      }
+
+      .search-box input[type="search"] {
+        width: 100%;
+      }
+
+      .form-grid,
+      .dashboard-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: span 1;
+      }
+
+      .history-item {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff !important;
+      }
+      .toolbar,
+      .table-controls,
+      .pagination,
+      .footer-row,
+      .actions,
+      .status {
+        display: none !important;
+      }
+      .container {
+        width: 100%;
+        margin: 0;
+      }
+      .title {
+        margin: 0 0 20px;
+        font-size: 28px;
+      }
+      table {
+        min-width: 0;
+      }
+      tbody td,
+      thead th {
+        font-size: 12px;
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">INACTIVOS HISTORIAS LABORALES 2025</h1>
+
+    <div class="toolbar">
+      <div class="btn-group">
+        <button class="btn" id="btnAdd">Agregar</button>
+        <button class="btn btn-success" id="btnNight">Nocturno</button>
+        <button class="btn btn-danger" id="btnDrive">Drive</button>
+        <button class="btn btn-warning" id="btnHistory">Historial</button>
+        <button class="btn btn-dark" id="btnReport">Informe</button>
+        <button class="btn" id="btnPrestamo" onclick="window.location.href='inactivos_v1.html'">
+  <span>📄</span> Prestamo de Documentos
+
+    
+        
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-light" id="btnRefresh">Actualizar</button>
+      </div>
+    </div>
+
+    <div class="api-box" id="apiNotice">
+      Verificando conexión...
+    </div>
+
+    <div class="table-controls">
+      <div class="length-box">
+        <span>Mostrar</span>
+        <select id="pageLength">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        <span>registros</span>
+      </div>
+
+      <div class="export-buttons">
+        <button class="btn btn-light" id="btnCopy">📋 Copiar</button>
+        <button class="btn btn-light" id="btnCsv">📄 CSV</button>
+        <button class="btn btn-light" id="btnExcel">🧾 Excel</button>
+        <button class="btn btn-light" id="btnPdf">📕 PDF</button>
+        <button class="btn btn-light" id="btnPrint">🖨 Imprimir</button>
+      </div>
+
+      <div class="search-box">
+        <label for="search">Buscar:</label>
+        <input id="search" type="search" />
+      </div>
+    </div>
+
+    <div class="filters-row">
+      <div class="filter-control">
+        <label for="filterCaja">Filtro por CAJA</label>
+        <select id="filterCaja">
+          <option value="">Todas las cajas</option>
+        </select>
+      </div>
+
+      <div class="filter-control">
+        <label for="filterCarpeta">Después filtrar por CARPETA</label>
+        <select id="filterCarpeta" disabled>
+          <option value="">Todas las carpetas</option>
+        </select>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" class="btn btn-light" id="btnClearFilters">Limpiar filtros</button>
+        <span class="filter-summary" id="filterSummary">Sin filtros activos</span>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-field="ID">ID</th>
+            <th class="sortable" data-field="ESTADO">ESTADO</th>
+            <th class="sortable" data-field="CAJA">CAJA</th>
+            <th class="sortable" data-field="CARPETA">CARPETA</th>
+            <th class="sortable" data-field="IDENTIFICACION">IDENTIFICACION</th>
+            <th class="sortable" data-field="NOMBRES Y APELLIDOS">NOMBRES Y<br>APELLIDOS</th>
+            <th class="sortable" data-field="TOMO">TOMO</th>
+            <th class="sortable" data-field="OBSERVACIONES">OBSERVACIONES</th>
+            <th class="no-sort">Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td colspan="9">Cargando registros...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-row">
+      <div id="tableInfo">Mostrando 0 registros</div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </div>
+
+  <!-- Modal formulario -->
+  <div class="overlay" id="formOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="formTitle">Registrar Carpeta</h2>
+        <button class="close" data-close="formOverlay">&times;</button>
+      </div>
+
+      <form id="recordForm">
+        <div class="modal-body">
+          <input type="hidden" id="recordId" />
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="required" for="estado">TIPO ESTADO</label>
+              <select id="estado" required>
+                <option value="">Seleccionar</option>
+                <option value="INACTIVO">INACTIVO</option>
+                <option value="ACTIVO">ACTIVO</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="required" for="caja">CAJA</label>
+              <input id="caja" type="number" placeholder="Numero" required />
+            </div>
+
+            <div class="form-group">
+              <label class="required" for="carpeta">CARPETA</label>
+              <input id="carpeta" type="number" placeholder="Numero" required />
+            </div>
+
+            <div class="form-group">
+              <label class="required" for="identificacion">No Documento</label>
+              <input id="identificacion" type="number" placeholder="Numero" required />
+            </div>
+
+            <div class="form-group full">
+              <label class="required" for="nombres">Nombre y Apellidos</label>
+              <input id="nombres" type="text" placeholder="Nombre Completo" required />
+            </div>
+
+            <div class="form-group">
+              <label for="tomo">TOMO</label>
+              <select id="tomo">
+                <option value="">Seleccionar</option>
+                <option value="NO REGISTRA TOMOS">NO REGISTRA TOMOS</option>
+                <option value="TOMO I">TOMO I</option>
+                <option value="TOMO II">TOMO II</option>
+                <option value="TOMO III">TOMO III</option>
+                <option value="TOMO IV">TOMO IV</option>
+                <option value="TOMO V">TOMO V</option>
+                <option value="TOMO VI">TOMO VI</option>
+                <option value="TOMO VII">TOMO VII</option>
+                <option value="TOMO VIII">TOMO VIII</option>
+                <option value="TOMO IX">TOMO IX</option>
+                <option value="TOMO X">TOMO X</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="observaciones">Observaciones</label>
+              <input id="observaciones" type="text" placeholder="Observaciones" />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close="formOverlay">Cerrar</button>
+          <button type="submit" class="btn" id="btnSave">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal historial -->
+  <div class="overlay" id="historyOverlay">
+    <div class="modal large">
+      <div class="modal-header">
+        <h2 class="modal-title">Historial de cambios</h2>
+        <button class="close" data-close="historyOverlay">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="api-box">
+          Aquí aparecen registros agregados, editados, eliminados y restaurados.
+          Puedes restaurar cualquier versión del historial con la clave autorizada.
+          Si el ID ya existe, se reemplaza por la versión seleccionada; si fue eliminado, se agrega de nuevo.
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-close="historyOverlay">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal informe -->
+  <div class="overlay" id="reportOverlay">
+    <div class="modal large">
+      <div class="modal-header">
+        <h2 class="modal-title">Informe y dashboard</h2>
+        <button class="close" data-close="reportOverlay">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="cards">
+          <div class="card">
+            <div class="num" id="cardTotal">0</div>
+            <div class="label">Total registros</div>
+          </div>
+          <div class="card">
+            <div class="num" id="cardInactivos">0</div>
+            <div class="label">Inactivos</div>
+          </div>
+          <div class="card">
+            <div class="num" id="cardActivos">0</div>
+            <div class="label">Activos</div>
+          </div>
+          <div class="card">
+            <div class="num" id="cardSinObs">0</div>
+            <div class="label">Sin observaciones</div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="chart-box">
+            <h3 class="chart-title">Distribución por estado</h3>
+            <canvas id="chartEstado" width="620" height="260"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <h3 class="chart-title">Registros por tomo</h3>
+            <canvas id="chartTomo" width="620" height="260"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <h3 class="chart-title">Top cajas con más carpetas</h3>
+            <canvas id="chartCaja" width="620" height="260"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <h3 class="chart-title">Alertas de calidad de datos</h3>
+            <div id="qualityBox"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" id="btnExportReport">Exportar informe CSV</button>
+        <button type="button" class="btn btn-secondary" data-close="reportOverlay">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal URL Apps Script -->
+  <div class="overlay" id="configOverlay">
+    <div class="modal small">
+      <div class="modal-header">
+        <h2 class="modal-title">URL Apps Script</h2>
+        <button class="close" data-close="configOverlay">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="api-box">
+          Pega la URL de implementación de tu Aplicación web de Apps Script.
+          Ejemplo: https://script.google.com/macros/s/AKfycb.../exec
+        </div>
+        <div class="form-group">
+          <label for="apiUrlInput">URL</label>
+          <input id="apiUrlInput" type="url" placeholder="https://script.google.com/macros/s/.../exec" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-close="configOverlay">Cerrar</button>
+        <button type="button" class="btn" id="btnSaveConfig">Guardar URL</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="status" id="statusBox"></div>
+
+  <script>
+    /*
+      URL INTERNA DE APPS SCRIPT
+      Pega aquí la URL completa de tu implementación Web App que termina en /exec.
+      La URL no se muestra en pantalla: la interfaz solo indica Conectado o Desconectado.
+    */
+    const API_URL_INTERNA = 'https://script.google.com/macros/s/AKfycby0WBYaCymX4jebK0q70Eu6DFj-_NFMwbcH0KrxqanCEuuVWgvNWYgODS_7L3CfKiEpiA/exec';
+    const API_URL = API_URL_INTERNA;
+    const DRIVE_URL = 'https://docs.google.com/spreadsheets/d/1bqq7sTHbr6tCk2uHPW-WoOt-4u1kOe8B1UkWN7DzkxU/edit?gid=830378407#gid=830378407';
+
+    const HEADERS = [
+      'ID',
+      'ESTADO',
+      'CAJA',
+      'CARPETA',
+      'IDENTIFICACION',
+      'NOMBRES Y APELLIDOS',
+      'TOMO',
+      'OBSERVACIONES'
+    ];
+
+    const state = {
+      records: [],
+      filtered: [],
+      summary: {},
+      currentPage: 1,
+      pageLength: 5,
+      search: '',
+      filterCaja: '',
+      filterCarpeta: '',
+      sortField: 'ID',
+      sortDir: 'desc',
+      editingId: null
+    };
+
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+
+    document.addEventListener('DOMContentLoaded', init);
+
+    function init() {
+      bindEvents();
+      loadTheme();
+      updateApiNotice();
+      loadRecords();
+    }
+
+    function bindEvents() {
+      $('#btnAdd').addEventListener('click', openAddModal);
+      $('#btnNight').addEventListener('click', toggleNightMode);
+      $('#btnDrive').addEventListener('click', () => window.open(DRIVE_URL, '_blank'));
+      $('#btnHistory').addEventListener('click', openHistory);
+      $('#btnReport').addEventListener('click', openReport);
+      const btnConfig = $('#btnConfig');
+      if (btnConfig) btnConfig.addEventListener('click', openConfig);
+      $('#btnRefresh').addEventListener('click', loadRecords);
+
+      $('#pageLength').addEventListener('change', (event) => {
+        state.pageLength = Number(event.target.value);
+        state.currentPage = 1;
+        renderTable();
+      });
+
+      $('#search').addEventListener('input', (event) => {
+        state.search = event.target.value.trim().toLowerCase();
+        state.currentPage = 1;
+        applyFilters();
+        renderTable();
+      });
+
+      $('#filterCaja').addEventListener('change', (event) => {
+        state.filterCaja = event.target.value;
+        state.filterCarpeta = '';
+        populateCarpetaFilterOptions();
+        state.currentPage = 1;
+        applyFilters();
+        renderTable();
+      });
+
+      $('#filterCarpeta').addEventListener('change', (event) => {
+        state.filterCarpeta = event.target.value;
+        state.currentPage = 1;
+        applyFilters();
+        renderTable();
+      });
+
+      $('#btnClearFilters').addEventListener('click', clearExcelFilters);
+
+      $$('#recordsTable th.sortable').forEach((th) => {
+        th.addEventListener('click', () => {
+          const field = th.dataset.field;
+          if (state.sortField === field) {
+            state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+          } else {
+            state.sortField = field;
+            state.sortDir = 'asc';
+          }
+          renderTable();
+        });
+      });
+
+      $('#recordForm').addEventListener('submit', saveRecord);
+      $('#btnCopy').addEventListener('click', copyTable);
+      $('#btnCsv').addEventListener('click', () => downloadCsv('inactivos_historias_laborales.csv', state.filtered));
+      $('#btnExcel').addEventListener('click', () => downloadExcel());
+      $('#btnPdf').addEventListener('click', () => window.print());
+      $('#btnPrint').addEventListener('click', () => window.print());
+      $('#btnExportReport').addEventListener('click', exportReportCsv);
+      const btnSaveConfig = $('#btnSaveConfig');
+      if (btnSaveConfig) btnSaveConfig.addEventListener('click', saveConfig);
+
+      $$('[data-close]').forEach((el) => {
+        el.addEventListener('click', () => closeModal(el.dataset.close));
+      });
+
+      $$('.overlay').forEach((overlay) => {
+        overlay.addEventListener('click', (event) => {
+          if (event.target === overlay) {
+            overlay.classList.remove('open');
+          }
+        });
+      });
+    }
+
+    function getApiUrl() {
+      const configured = String(API_URL_INTERNA || API_URL || '').trim();
+
+      if (configured && configured !== 'PEGA_AQUI_TU_URL_COMPLETA_DE_APPS_SCRIPT_EXEC') {
+        return configured;
+      }
+
+      if (location.href.includes('/exec')) {
+        return location.href.split('?')[0];
+      }
+
+      return '';
+    }
+
+    async function api(action, data = {}) {
+      const url = getApiUrl();
+
+      if (!url) {
+        updateApiNotice(false);
+        throw new Error('Desconectado de Apps Script. Pega la URL interna en API_URL_INTERNA dentro del index.html.');
+      }
+
+      const body = new URLSearchParams();
+      body.set('action', action);
+      Object.entries(data || {}).forEach(([key, value]) => {
+        body.set(key, value == null ? '' : String(value));
+      });
+      body.set('payload', JSON.stringify({ action, ...data }));
+
+      const response = await fetch(url, {
+        method: 'POST',
+        body
+      });
+
+      const text = await response.text();
+
+      let json;
+      try {
+        json = JSON.parse(text);
+      } catch (err) {
+        throw new Error('La respuesta no es JSON. Revisa la URL de Apps Script o abre directamente la Web App.');
+      }
+
+      if (!json.ok) {
+        updateApiNotice(true);
+        throw new Error(json.error || 'Error en la operación.');
+      }
+
+      updateApiNotice(true);
+      return json;
+    }
+
+    async function loadRecords() {
+      try {
+        showStatus('Cargando registros...', 'info');
+        const data = await api('list');
+        state.records = data.records || [];
+        state.summary = data.summary || {};
+        populateCajaFilterOptions();
+        populateCarpetaFilterOptions();
+        applyFilters();
+        renderTable();
+        updateReportCards();
+        showStatus('Registros actualizados.', 'ok');
+      } catch (err) {
+        renderError(err.message);
+        showStatus(err.message, 'err');
+      }
+    }
+
+    function applyFilters() {
+      const q = state.search;
+      const caja = state.filterCaja;
+      const carpeta = state.filterCarpeta;
+
+      state.filtered = state.records.filter((record) => {
+        if (caja && String(record.CAJA || '') !== caja) return false;
+        if (carpeta && String(record.CARPETA || '') !== carpeta) return false;
+        if (!q) return true;
+        return HEADERS.some((key) => String(record[key] || '').toLowerCase().includes(q));
+      });
+
+      updateFilterSummary();
+    }
+
+    function populateCajaFilterOptions() {
+      const select = $('#filterCaja');
+      if (!select) return;
+
+      const values = uniqueColumnValues(state.records, 'CAJA');
+      const selected = state.filterCaja;
+      select.innerHTML = '<option value="">Todas las cajas</option>' + values.map((value) =>
+        `<option value="${escapeAttr(value)}">CAJA ${escapeHtml(value)}</option>`
+      ).join('');
+
+      if (selected && values.includes(selected)) {
+        select.value = selected;
+      } else {
+        state.filterCaja = '';
+        select.value = '';
+      }
+    }
+
+    function populateCarpetaFilterOptions() {
+      const select = $('#filterCarpeta');
+      if (!select) return;
+
+      const source = state.filterCaja
+        ? state.records.filter((record) => String(record.CAJA || '') === state.filterCaja)
+        : [];
+
+      const values = uniqueColumnValues(source, 'CARPETA');
+      const selected = state.filterCarpeta;
+      select.disabled = !state.filterCaja;
+      select.innerHTML = '<option value="">Todas las carpetas</option>' + values.map((value) =>
+        `<option value="${escapeAttr(value)}">CARPETA ${escapeHtml(value)}</option>`
+      ).join('');
+
+      if (selected && values.includes(selected)) {
+        select.value = selected;
+      } else {
+        state.filterCarpeta = '';
+        select.value = '';
+      }
+    }
+
+    function uniqueColumnValues(records, field) {
+      return Array.from(new Set(
+        records.map((record) => String(record[field] || '').trim()).filter(Boolean)
+      )).sort((a, b) => String(a).localeCompare(String(b), 'es', { numeric: true }));
+    }
+
+    function clearExcelFilters() {
+      state.filterCaja = '';
+      state.filterCarpeta = '';
+      populateCajaFilterOptions();
+      populateCarpetaFilterOptions();
+      state.currentPage = 1;
+      applyFilters();
+      renderTable();
+    }
+
+    function updateFilterSummary() {
+      const summary = $('#filterSummary');
+      if (!summary) return;
+
+      const parts = [];
+      if (state.filterCaja) parts.push(`CAJA ${state.filterCaja}`);
+      if (state.filterCarpeta) parts.push(`CARPETA ${state.filterCarpeta}`);
+
+      summary.textContent = parts.length
+        ? `${parts.join(' / ')} · ${state.filtered.length} resultado(s)`
+        : `Sin filtros activos · ${state.filtered.length} resultado(s)`;
+    }
+
+    function sortRecords(records) {
+      const field = state.sortField;
+      const dir = state.sortDir === 'asc' ? 1 : -1;
+
+      return [...records].sort((a, b) => {
+        const av = a[field] ?? '';
+        const bv = b[field] ?? '';
+
+        const an = Number(av);
+        const bn = Number(bv);
+        const bothNumeric = !Number.isNaN(an) && !Number.isNaN(bn) && av !== '' && bv !== '';
+
+        if (bothNumeric) return (an - bn) * dir;
+
+        return String(av).localeCompare(String(bv), 'es', { numeric: true }) * dir;
+      });
+    }
+
+    function renderTable() {
+      const tbody = $('#tableBody');
+      const sorted = sortRecords(state.filtered);
+      const total = sorted.length;
+      const totalPages = Math.max(1, Math.ceil(total / state.pageLength));
+
+      if (state.currentPage > totalPages) {
+        state.currentPage = totalPages;
+      }
+
+      const start = (state.currentPage - 1) * state.pageLength;
+      const pageRows = sorted.slice(start, start + state.pageLength);
+
+      if (!pageRows.length) {
+        tbody.innerHTML = '<tr><td colspan="9">No hay registros para mostrar.</td></tr>';
+      } else {
+        tbody.innerHTML = pageRows.map((record) => `
+          <tr>
+            <td>${escapeHtml(record.ID)}</td>
+            <td class="${record.ESTADO === 'ACTIVO' ? 'estado-activo' : 'estado-inactivo'}">${escapeHtml(record.ESTADO)}</td>
+            <td>${escapeHtml(record.CAJA)}</td>
+            <td>${escapeHtml(record.CARPETA)}</td>
+            <td>${escapeHtml(record.IDENTIFICACION)}</td>
+            <td>${escapeHtml(record['NOMBRES Y APELLIDOS'])}</td>
+            <td>${escapeHtml(record.TOMO || '')}</td>
+            <td>${escapeHtml(record.OBSERVACIONES || '')}</td>
+            <td>
+              <div class="actions">
+                <button class="icon-btn" title="Editar" onclick="openEditModal('${escapeAttr(record.ID)}')">✎</button>
+                <button class="icon-btn delete" title="Eliminar" onclick="deleteRecord('${escapeAttr(record.ID)}')">🗑</button>
+              </div>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      const from = total ? start + 1 : 0;
+      const to = Math.min(start + pageRows.length, total);
+      $('#tableInfo').textContent = `Mostrando ${from} a ${to} de ${total} registros`;
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      const box = $('#pagination');
+      const current = state.currentPage;
+
+      const pages = [];
+      if (totalPages <= 8) {
+        for (let i = 1; i <= totalPages; i++) pages.push(i);
+      } else {
+        pages.push(1);
+        if (current > 4) pages.push('...');
+        const start = Math.max(2, current - 2);
+        const end = Math.min(totalPages - 1, current + 2);
+        for (let i = start; i <= end; i++) pages.push(i);
+        if (current < totalPages - 3) pages.push('...');
+        pages.push(totalPages);
+      }
+
+      box.innerHTML = `
+        <button class="page-btn" ${current === 1 ? 'disabled' : ''} onclick="goToPage(1)">Primero</button>
+        <button class="page-btn" ${current === 1 ? 'disabled' : ''} onclick="goToPage(${current - 1})">Anterior</button>
+        ${pages.map((p) => p === '...'
+          ? '<button class="page-btn" disabled>...</button>'
+          : `<button class="page-btn ${p === current ? 'active' : ''}" onclick="goToPage(${p})">${p}</button>`
+        ).join('')}
+        <button class="page-btn" ${current === totalPages ? 'disabled' : ''} onclick="goToPage(${current + 1})">Siguiente</button>
+        <button class="page-btn" ${current === totalPages ? 'disabled' : ''} onclick="goToPage(${totalPages})">Último</button>
+      `;
+    }
+
+    function goToPage(page) {
+      state.currentPage = page;
+      renderTable();
+    }
+
+    function openAddModal() {
+      state.editingId = null;
+      $('#formTitle').textContent = 'Registrar Carpeta';
+      $('#btnSave').textContent = 'Registrar';
+      $('#recordForm').reset();
+      $('#recordId').value = '';
+      $('#estado').value = 'INACTIVO';
+      $('#tomo').value = 'NO REGISTRA TOMOS';
+      openModal('formOverlay');
+    }
+
+    function openEditModal(id) {
+      const record = state.records.find((item) => String(item.ID) === String(id));
+      if (!record) {
+        showStatus('No se encontró el registro para editar.', 'err');
+        return;
+      }
+
+      state.editingId = id;
+      $('#formTitle').textContent = `Editar Carpeta ID ${id}`;
+      $('#btnSave').textContent = 'Guardar cambios';
+      $('#recordId').value = record.ID;
+      $('#estado').value = record.ESTADO || 'INACTIVO';
+      $('#caja').value = record.CAJA || '';
+      $('#carpeta').value = record.CARPETA || '';
+      $('#identificacion').value = record.IDENTIFICACION || '';
+      $('#nombres').value = record['NOMBRES Y APELLIDOS'] || '';
+      $('#tomo').value = record.TOMO || 'NO REGISTRA TOMOS';
+      $('#observaciones').value = record.OBSERVACIONES || '';
+      openModal('formOverlay');
+    }
+
+    async function saveRecord(event) {
+      event.preventDefault();
+
+      const record = {
+        id: $('#recordId').value.trim(),
+        estado: $('#estado').value.trim(),
+        caja: $('#caja').value.trim(),
+        carpeta: $('#carpeta').value.trim(),
+        identificacion: $('#identificacion').value.trim(),
+        nombres: $('#nombres').value.trim().toUpperCase(),
+        tomo: ($('#tomo').value || 'NO REGISTRA TOMOS').trim(),
+        observaciones: $('#observaciones').value.trim().toUpperCase()
+      };
+
+      const faltantes = [];
+      if (!record.estado) faltantes.push('TIPO ESTADO');
+      if (!record.caja) faltantes.push('CAJA');
+      if (!record.carpeta) faltantes.push('CARPETA');
+      if (!record.identificacion) faltantes.push('IDENTIFICACION');
+      if (!record.nombres) faltantes.push('NOMBRES Y APELLIDOS');
+      if (faltantes.length) {
+        showStatus('Faltan campos obligatorios: ' + faltantes.join(', '), 'err');
+        return;
+      }
+
+      try {
+        $('#btnSave').disabled = true;
+        const action = state.editingId ? 'update' : 'add';
+        const result = await api(action, record);
+
+        state.records = result.records || state.records;
+        state.summary = result.summary || state.summary;
+        populateCajaFilterOptions();
+        populateCarpetaFilterOptions();
+        applyFilters();
+        renderTable();
+        updateReportCards();
+        closeModal('formOverlay');
+        showStatus(result.message || 'Guardado correctamente.', 'ok');
+      } catch (err) {
+        showStatus(err.message, 'err');
+      } finally {
+        $('#btnSave').disabled = false;
+      }
+    }
+
+    async function deleteRecord(id) {
+      const clave = prompt(`Para eliminar el ID ${id}, escribe la clave autorizada:`);
+
+      if (clave === null) return;
+
+      try {
+        const result = await api('delete', { id, clave });
+        state.records = result.records || [];
+        state.summary = result.summary || {};
+        populateCajaFilterOptions();
+        populateCarpetaFilterOptions();
+        applyFilters();
+        renderTable();
+        updateReportCards();
+        showStatus(result.message || 'Registro eliminado.', 'ok');
+      } catch (err) {
+        showStatus(err.message, 'err');
+      }
+    }
+
+    async function openHistory() {
+      openModal('historyOverlay');
+      $('#historyList').innerHTML = '<div class="history-item">Cargando historial...</div>';
+
+      try {
+        const result = await api('history', { limit: 500 });
+        renderHistory(result.history || []);
+      } catch (err) {
+        $('#historyList').innerHTML = `<div class="history-item">${escapeHtml(err.message)}</div>`;
+      }
+    }
+
+    function renderHistory(history) {
+      if (!history.length) {
+        $('#historyList').innerHTML = '<div class="history-item">No hay historial todavía.</div>';
+        return;
+      }
+
+      $('#historyList').innerHTML = history.map((item) => {
+        const action = String(item.ACCION || '').toUpperCase();
+        const badgeClass =
+          action === 'AGREGAR' ? 'add' :
+          action === 'EDITAR' ? 'edit' :
+          action === 'ELIMINAR' ? 'delete' :
+          action === 'RESTAURAR' ? 'restore' : '';
+
+        const historyRow = item.__ROW_NUMBER || '';
+        const restoreButton = historyRow
+          ? `<button class="btn btn-warning" onclick="restoreHistoryItem('${escapeAttr(historyRow)}', '${escapeAttr(item.ID)}')">Restaurar versión</button>`
+          : `<button class="btn btn-warning" onclick="restoreRecord('${escapeAttr(item.ID)}')">Restaurar</button>`;
+
+        return `
+          <div class="history-item">
+            <div>${escapeHtml(item.FECHA || '')}</div>
+            <div><span class="badge ${badgeClass}">${escapeHtml(action)}</span></div>
+            <div>ID ${escapeHtml(item.ID || '')}</div>
+            <div>
+              <b>${escapeHtml(item['NOMBRES Y APELLIDOS'] || '')}</b><br>
+              Caja ${escapeHtml(item.CAJA || '')} - Carpeta ${escapeHtml(item.CARPETA || '')} - Doc. ${escapeHtml(item.IDENTIFICACION || '')}
+            </div>
+            <div>${restoreButton}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function restoreRecord(id) {
+      const clave = prompt(`Para restaurar el ID ${id}, escribe la clave autorizada:`);
+
+      if (clave === null) return;
+
+      try {
+        const result = await api('restore', { id, clave });
+        state.records = result.records || [];
+        state.summary = result.summary || {};
+        populateCajaFilterOptions();
+        populateCarpetaFilterOptions();
+        applyFilters();
+        renderTable();
+        updateReportCards();
+        await openHistory();
+        showStatus(result.message || 'Registro restaurado.', 'ok');
+      } catch (err) {
+        showStatus(err.message, 'err');
+      }
+    }
+
+    async function restoreHistoryItem(historyRow, id) {
+      const clave = prompt(`Para restaurar la versión histórica del ID ${id}, escribe la clave autorizada:`);
+
+      if (clave === null) return;
+
+      try {
+        const result = await api('restore_history', { historyRow, clave });
+        state.records = result.records || [];
+        state.summary = result.summary || {};
+        populateCajaFilterOptions();
+        populateCarpetaFilterOptions();
+        applyFilters();
+        renderTable();
+        updateReportCards();
+        await openHistory();
+        showStatus(result.message || 'Versión histórica restaurada.', 'ok');
+      } catch (err) {
+        showStatus(err.message, 'err');
+      }
+    }
+
+    async function openReport() {
+      openModal('reportOverlay');
+
+      try {
+        const result = await api('dashboard');
+        state.summary = result;
+        updateReportCards();
+        renderCharts();
+      } catch (err) {
+        showStatus(err.message, 'err');
+        updateReportCards();
+        renderCharts();
+      }
+    }
+
+    function updateReportCards() {
+      const summary = state.summary || {};
+      $('#cardTotal').textContent = summary.total ?? state.records.length;
+      $('#cardInactivos').textContent = summary.inactivos ?? countLocal('ESTADO', 'INACTIVO');
+      $('#cardActivos').textContent = summary.activos ?? countLocal('ESTADO', 'ACTIVO');
+      $('#cardSinObs').textContent = summary.sinObservacion ?? state.records.filter((r) => !String(r.OBSERVACIONES || '').trim()).length;
+
+      const duplicates = summary.duplicadosIdentificacion || [];
+      const box = $('#qualityBox');
+
+      if (!box) return;
+
+      box.innerHTML = `
+        <p><b>Última lectura:</b> ${escapeHtml(summary.ultimaActualizacion || new Date().toLocaleString())}</p>
+        <p><b>Caja inicial:</b> ${escapeHtml(summary.primeraCaja || 'N/A')}</p>
+        <p><b>Caja final:</b> ${escapeHtml(summary.ultimaCaja || 'N/A')}</p>
+        <p><b>Identificaciones duplicadas:</b> ${duplicates.length}</p>
+        ${duplicates.length
+          ? `<ul>${duplicates.slice(0, 12).map((d) => `<li>${escapeHtml(d.valor)}: IDs ${escapeHtml((d.ids || []).join(', '))}</li>`).join('')}</ul>`
+          : '<p>No se detectan duplicados por identificación.</p>'}
+      `;
+    }
+
+    function countLocal(field, value) {
+      return state.records.filter((r) => String(r[field]) === value).length;
+    }
+
+    function renderCharts() {
+      const summary = state.summary || {};
+      drawPieChart('chartEstado', summary.estado || countMap(state.records, 'ESTADO'));
+      drawBarChart('chartTomo', summary.tomo || countMap(state.records, 'TOMO'));
+      drawBarChart('chartCaja', topEntries(summary.caja || countMap(state.records, 'CAJA'), 10), true);
+    }
+
+    function countMap(records, field) {
+      return records.reduce((acc, item) => {
+        const key = item[field] || 'SIN DATO';
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
+    }
+
+    function topEntries(obj, limit) {
+      return Object.fromEntries(
+        Object.entries(obj || {})
+          .sort((a, b) => Number(b[1]) - Number(a[1]))
+          .slice(0, limit)
+      );
+    }
+
+    function drawBarChart(canvasId, dataObj) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width;
+      const height = canvas.height;
+      ctx.clearRect(0, 0, width, height);
+
+      const entries = Object.entries(dataObj || {});
+      if (!entries.length) {
+        drawNoData(ctx, width, height);
+        return;
+      }
+
+      const max = Math.max(...entries.map(([, v]) => Number(v)));
+      const margin = 42;
+      const gap = 10;
+      const barWidth = Math.max(18, (width - margin * 2 - gap * (entries.length - 1)) / entries.length);
+
+      ctx.font = '13px Arial';
+      ctx.textAlign = 'center';
+
+      entries.forEach(([label, value], index) => {
+        const x = margin + index * (barWidth + gap);
+        const barHeight = max ? (Number(value) / max) * (height - 96) : 0;
+        const y = height - margin - barHeight;
+
+        const gradient = ctx.createLinearGradient(0, y, 0, height - margin);
+        gradient.addColorStop(0, '#0d6efd');
+        gradient.addColorStop(1, '#93c5fd');
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(x, y, barWidth, barHeight);
+
+        ctx.fillStyle = getTextColor();
+        ctx.fillText(String(value), x + barWidth / 2, y - 8);
+
+        const shortLabel = String(label).length > 10 ? String(label).slice(0, 10) + '…' : String(label);
+        ctx.save();
+        ctx.translate(x + barWidth / 2, height - 24);
+        ctx.rotate(-Math.PI / 8);
+        ctx.fillText(shortLabel, 0, 0);
+        ctx.restore();
+      });
+    }
+
+    function drawPieChart(canvasId, dataObj) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width;
+      const height = canvas.height;
+      ctx.clearRect(0, 0, width, height);
+
+      const entries = Object.entries(dataObj || {});
+      const total = entries.reduce((sum, [, value]) => sum + Number(value || 0), 0);
+
+      if (!total) {
+        drawNoData(ctx, width, height);
+        return;
+      }
+
+      const colors = ['#0d6efd', '#dc3545', '#198754', '#f59e0b', '#8b5cf6', '#14b8a6'];
+      const cx = width * .36;
+      const cy = height / 2;
+      const radius = Math.min(width, height) * .34;
+      let start = -Math.PI / 2;
+
+      entries.forEach(([label, value], index) => {
+        const slice = (Number(value) / total) * Math.PI * 2;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.arc(cx, cy, radius, start, start + slice);
+        ctx.closePath();
+        ctx.fillStyle = colors[index % colors.length];
+        ctx.fill();
+        start += slice;
+      });
+
+      ctx.font = '15px Arial';
+      ctx.textAlign = 'left';
+      entries.forEach(([label, value], index) => {
+        const y = 72 + index * 30;
+        ctx.fillStyle = colors[index % colors.length];
+        ctx.fillRect(width * .68, y - 13, 16, 16);
+        ctx.fillStyle = getTextColor();
+        const pct = ((Number(value) / total) * 100).toFixed(1);
+        ctx.fillText(`${label}: ${value} (${pct}%)`, width * .68 + 24, y);
+      });
+    }
+
+    function drawNoData(ctx, width, height) {
+      ctx.fillStyle = getTextColor();
+      ctx.font = '18px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('Sin datos para graficar', width / 2, height / 2);
+    }
+
+    function getTextColor() {
+      return document.body.classList.contains('dark') ? '#e5e7eb' : '#20252b';
+    }
+
+    function copyTable() {
+      const text = toCsv(state.filtered, '\t');
+      navigator.clipboard.writeText(text)
+        .then(() => showStatus('Tabla copiada al portapapeles.', 'ok'))
+        .catch(() => showStatus('No se pudo copiar automáticamente.', 'err'));
+    }
+
+    function downloadCsv(filename, records) {
+      const csv = toCsv(records, ',');
+      downloadText(filename, csv, 'text/csv;charset=utf-8');
+    }
+
+    function downloadExcel() {
+      const htmlTable = `
+        <table>
+          <thead><tr>${HEADERS.map((h) => `<th>${escapeHtml(h)}</th>`).join('')}</tr></thead>
+          <tbody>
+            ${state.filtered.map((r) => `<tr>${HEADERS.map((h) => `<td>${escapeHtml(r[h] || '')}</td>`).join('')}</tr>`).join('')}
+          </tbody>
+        </table>
+      `;
+      downloadText('inactivos_historias_laborales.xls', htmlTable, 'application/vnd.ms-excel;charset=utf-8');
+    }
+
+    function exportReportCsv() {
+      const summary = state.summary || {};
+      const rows = [
+        ['Indicador', 'Valor'],
+        ['Total registros', summary.total ?? state.records.length],
+        ['Inactivos', summary.inactivos ?? countLocal('ESTADO', 'INACTIVO')],
+        ['Activos', summary.activos ?? countLocal('ESTADO', 'ACTIVO')],
+        ['Sin observaciones', summary.sinObservacion ?? ''],
+        ['Caja inicial', summary.primeraCaja ?? ''],
+        ['Caja final', summary.ultimaCaja ?? ''],
+        ['Última actualización', summary.ultimaActualizacion ?? new Date().toLocaleString()]
+      ];
+      const csv = rows.map((row) => row.map(csvEscape).join(',')).join('\n');
+      downloadText('informe_inactivos.csv', csv, 'text/csv;charset=utf-8');
+    }
+
+    function toCsv(records, separator) {
+      const rows = [HEADERS].concat(records.map((record) => HEADERS.map((h) => record[h] || '')));
+      return rows.map((row) => row.map(csvEscape).join(separator)).join('\n');
+    }
+
+    function csvEscape(value) {
+      const str = String(value ?? '');
+      if (/[",\n\r\t;]/.test(str)) {
+        return `"${str.replace(/"/g, '""')}"`;
+      }
+      return str;
+    }
+
+    function downloadText(filename, content, mime) {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function openConfig() {
+      $('#apiUrlInput').value = getApiUrl();
+      openModal('configOverlay');
+    }
+
+    function saveConfig() {
+      const value = $('#apiUrlInput').value.trim();
+      if (!value) {
+        showStatus('Pega una URL válida de Apps Script.', 'err');
+        return;
+      }
+      localStorage.setItem('INACTIVOS_API_URL', value);
+      closeModal('configOverlay');
+      updateApiNotice();
+      showStatus('URL guardada. Probando conexión...', 'info');
+      loadRecords();
+    }
+
+    function updateApiNotice(forceState) {
+      const notice = $('#apiNotice');
+      if (!notice) return;
+
+      const connected = typeof forceState === 'boolean' ? forceState : Boolean(getApiUrl());
+      notice.style.display = 'block';
+      notice.innerHTML = connected
+        ? '<b>Conectado a Apps Script</b>'
+        : '<b>Desconectado de Apps Script</b>';
+      notice.classList.toggle('api-ok', connected);
+      notice.classList.toggle('api-bad', !connected);
+    }
+
+    function shortUrl(url) {
+      return '';
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('open');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+
+    function toggleNightMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('INACTIVOS_DARK_MODE', document.body.classList.contains('dark') ? '1' : '0');
+      renderCharts();
+    }
+
+    function loadTheme() {
+      if (localStorage.getItem('INACTIVOS_DARK_MODE') === '1') {
+        document.body.classList.add('dark');
+      }
+    }
+
+    function showStatus(message, type = 'info') {
+      const box = $('#statusBox');
+      box.className = `status ${type} open`;
+      box.textContent = message;
+      clearTimeout(showStatus.timer);
+      showStatus.timer = setTimeout(() => {
+        box.classList.remove('open');
+      }, 3600);
+    }
+
+    function renderError(message) {
+      $('#tableBody').innerHTML = `<tr><td colspan="9">${escapeHtml(message)}</td></tr>`;
+      $('#tableInfo').textContent = 'Mostrando 0 registros';
+      $('#pagination').innerHTML = '';
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function escapeAttr(value) {
+      return escapeHtml(value).replaceAll('`', '&#096;');
+    }
+
+    window.goToPage = goToPage;
+    window.openEditModal = openEditModal;
+    window.deleteRecord = deleteRecord;
+    window.restoreRecord = restoreRecord;
+    window.restoreHistoryItem = restoreHistoryItem;
+  </script>
+</body>
+</html>
